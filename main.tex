@@ -7,6 +7,14 @@
 \usepackage{enumitem}
 \usepackage{caption}
 \usepackage[toc,nonumberlist,acronym]{glossaries}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{url}
+
+\setcounter{section}{-1}
+
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
 
 \linespread{1.5}
 
@@ -38,33 +46,35 @@
     \cleardoublepage
   \pagenumbering{arabic}}
 
-\title{Positive Train Control: Getting on the Right Track}
+\title{POSITIVE TRAIN CONTROL: GETTING ON THE RIGHT TRACK}
 \titlepic{
     \includegraphics[width=5in]{TitleImage.png}\\
     %citation
-    (Citation)
+    (Rachel La Corte/AP)
 }
 \author{Michael Wu, Doruk Karınca, Austin Olson,\\Christian Clarion, John Song}
-\date{March 19th, 2018}
+\date{Engineering 183EW: Engineering and Society \\ Discussion 1G \\ March 19, 2018}
 
 \makeglossaries
 
-\newacronym{fra}{FRA}{United States Federal Railroad Administration}
 \newacronym{ptc}{PTC}{Positive Train Control}
-\newacronym{gps}{GPS}{Global Positioning System}
 \newacronym{ntsb}{NTSB}{National Transportation Safety Board}
-\newacronym{rsia}{RSIA}{Railroad Safety Improvement Act}
+\newacronym{fra}{FRA}{United States Federal Railroad Administration}
 \newacronym{usdot}{USDOT}{United States Department of Transportation}
+\newacronym{rsia}{RSIA}{Railroad Safety Improvement Act}
+\newacronym{gps}{GPS}{Global Positioning System}
 \newacronym{wmata}{WMATA}{Washington Metropolitan Area Transit Authority}
 \newacronym{metrolink}{Metrolink}{Southern California Regional Rail Authority}
-\newacronym{cbtc}{CBTC}{Communications Based Train Control}
 \newacronym{abs}{ABS}{Automatic Block Signaling}
+\newacronym{cbtc}{CBTC}{Communications Based Train Control}
 \newacronym{eatc}{E-ATC}{Enhanced Automatic Train Control}
 \newacronym{ats}{ATS}{Automatic Train Stop}
 \newacronym{atc}{ATC}{Automatic Train Control}
 \newacronym{itcs}{ITCS}{Incremental Train Control System}
 \newacronym{icscert}{ICS-CERT}{U.S. Industrial Control Systems Cyber Emergency Response Team}
 \newacronym{ddos}{DDoS}{Distributed Denial of Service}
+
+\patchcmd{\tableofcontents}{\contentsname}{\MakeUppercase\contentsname}{}{}
 
 \begin{document}
 
@@ -88,8 +98,7 @@ Because of the vital role trains have played in American life for two
 centuries, train safety is a paramount concern. Either on short trips to work
 or long trips across the country, a vast number of people ride on trains
 everyday: Amtrak alone estimated their passengers as numbering 31.3 million in
-%citation
-2016 (Amtrak, 2016). The \gls{ntsb} and the \gls{fra} are two of the most
+2016. The \gls{ntsb} and the \gls{fra} are two of the most
 important government bodies for the purpose of train safety.
 
 In recent years, many fatal crashes have placed a more immediate emphasis on
@@ -169,14 +178,15 @@ Union Pacific open-source its \gls{ptc} technology for the use of other
 railways. We derive from duty ethics in analyzing this ethical dilemma.
 
 Another concern is the safety and reliability issues associated with making a
-\gls{ptc} system that delivers the desired protection from fatal crashes.
-Experts observing the \gls{ptc} development practices have identified large
-security holes that can be used to hijack the \gls{ptc} system and cause the
-crashes that we intended to prevent. Our recommendation in this case is to err
-towards a slower but secure development of \gls{ptc} than develop it
+\gls{ptc} system that delivers the desired protection from fatal crashes. Experts
+observing the \gls{ptc} development practices have identified
+security vulnerabilities that can be used to disrupt and hijack the \gls{ptc} system,
+potentially causing worse crashes than the ones that we intended to prevent.
+Our recommendation in this case is to err on the side of caution, leaning towards a
+slower but secure development of \gls{ptc} than develop it
 posthaste. We derive from utilitarianism in the making of this decision.
 
-Next, we alleviate the concerns related to labor displacement. There is a
+We will also address concerns related to labor displacement. There is a
 misconception that \gls{ptc} will automate all types of train motion and
 render the engineer obsolete. However, \gls{ptc} is merely an automatic
 braking system: it identifies a potential for derailment or crash and applies
@@ -184,14 +194,14 @@ the brakes if the brakes are not applied by the engineer in a timely manner.
 In fact, development efforts of \gls{ptc} results in adding more jobs to the
 labor economy. Union Pacific has invested over \$2 billion and hired about a
 %citation
-thousand engineers to work on the development of \gls{ptc} (Union Pacific).
+thousand engineers to work on the development of \gls{ptc} (Union Pacific, 2018).
 Therefore a discussion on the negative impact on labor economy is unfounded.
 
 Finally, we discuss the legislative issues with \gls{ptc}, namely, Congress’
 stance in the legal enforcement in \gls{ptc}. Deadline extensions for railway
 companies to implement \gls{ptc} have totaled to 5 years and are expected to
 increase. Rights ethics is summoned to analyze the actions of the Congress and
-its responsibility to US citizens. Essentially, the people’s rights to life
+its responsibility to U.S. citizens. Essentially, the people’s rights to life
 and safety are put at risk, therefore Congress needs to be steadfast in its
 enforcement of deadlines.
 
@@ -229,11 +239,14 @@ issue the most provided analysis for that issue. Afterwards, we drew conclusions
 based on our ethical analysis and wrote recommendations for action.
 
 Our editing process was done in person, and we met for a period of about six to
-seven hours as a group to finalize this report. During this time period, we wrote
-additional sections required for the final report such as the summary,
-introduction, and conclusion. After the bulk of our writing, we added images to
-help expand on our topic. We also compiled a glossary and table of contents. Our
-contribution matrix is shown below. X indicates primary contribution.
+seven hours as a group to finalize this report. During this time period, we integrated
+our work, wrote additional sections required for the final report such as the summary,
+introduction and conclusion, and worked to improve the flow between sections. After
+completing the bulk of our writing, we added images and diagrams to
+help expand on our topic, some of which we drew ourselves. We also compiled a glossary
+and table of contents.
+
+Shown below is our contribution matrix, where X indicates primary contribution.
 
 \begin{table}[htbp]
     \begin{center}
@@ -261,8 +274,8 @@ contribution matrix is shown below. X indicates primary contribution.
 Train accidents are devastating for the victims and their families: in the past
 decade there have been 20 railroad incidents across the United States, causing
 %citation
-147 fatalities in the past decade alone (Bureau of Transportation Statistics,
-2017). Many of these accidents were collisions or derailments caused by human
+147 fatalities in the past decade alone (U.S. Dept. of Defense, 2017). Many of these
+accidents were collisions or derailments caused by human
 operator error and could have been prevented with technology known as \gls{ptc}.
 \gls{ptc} is a system which uses sensors on trains and on tracks to automatically
 stop a train when a potentially dangerous situation is present. The system is
@@ -303,7 +316,7 @@ incidents with the worst casualties are listed below.
         ``This accident in Newton, Massachusetts, is another in a long series of
         accidents that could have been prevented the territory been equipped with
         %citation
-        a positive train control system'' (NTSB, 2008).
+        a positive train control system'' (NTSB Newton, 2009).
     \end{itemize}
     \item
     \begin{itemize}
@@ -313,7 +326,7 @@ incidents with the worst casualties are listed below.
         with a Union Pacific Railroad freight train. The \gls{metrolink}’s
         locomotive and one of the three passenger cars derailed while two of the
         %citation
-        freight’s locomotives derailed and 10 of its 17 cars derailed (CNN,
+        freight’s locomotives derailed and 10 of its 17 cars derailed (Hanna and Criss,
         2018). Damages were in excess of \$12 million.
         \item \textbf{Why}: The cause of the accident was the failure of the
         \gls{metrolink} engineer to appropriately respond to a red signal which
@@ -325,7 +338,7 @@ incidents with the worst casualties are listed below.
         Code of Operating Rules.
         \item \textbf{Preventable}: Yes, the final investigation report that the
         %citation
-        use of \gls{ptc} would have prevented the crash (NTSB, 2008).
+        use of \gls{ptc} would have prevented the crash (NTSB Chatsworth, 2010).
     \end{itemize}
     \item
     \begin{itemize}
@@ -359,8 +372,8 @@ incidents with the worst casualties are listed below.
         the speed of the train to make the turn.
         \item \textbf{Preventable}: Yes, The \gls{ntsb} report states that the
         %citation
-        implementation of \gls{ptc} could have prevented this incident (NTSB,
-        2013).
+        implementation of \gls{ptc} could have prevented this incident (NTSB Metro North,
+        2014).
     \end{itemize}
     \item
     \begin{itemize}
@@ -382,7 +395,7 @@ incidents with the worst casualties are listed below.
         travelling in a nearby area.
         \item \textbf{Preventable}: Yes, contributing to the cause was the ``lack
         %citation
-        of positive train control system'' (NTSB, 2015).
+        of positive train control system'' (NTSB Philidelphia, 2016).
     \end{itemize}
     \item
     \begin{itemize}
@@ -396,7 +409,7 @@ incidents with the worst casualties are listed below.
         only braked moments before the crash.
         \item \textbf{Preventable}: Most likely, this incident is still being
         %citation
-        investigated by the \gls{ntsb} (CNN, 2018).
+        investigated by the \gls{ntsb} (Hanna and Criss, 2018).
     \end{itemize}
 \end{enumerate}
 
@@ -405,8 +418,8 @@ incidents with the worst casualties are listed below.
         \includegraphics[width=\textwidth]{PTCAdoption.png}
         %citation
         \captionsetup{justification=centering}
-        \caption[National PTC Adoption]{Total national \gls{ptc} adoption progress as of September 30, 2017
-        (Federal Railroad Administration).}
+        \caption[National PTC Adoption]{Total national \gls{ptc} adoption progress as
+        of September 30, 2017 (FRA PTC Implementation, 2017).}
         \label{adoption}
     \end{center}
 \end{figure}
@@ -421,10 +434,9 @@ additional lives at risk. According to the \gls{fra}, as of September 30, 2017,
 only 64.4\% of freight locomotives and only 43.8\% of freight route miles in
 America are equipped with operable \gls{ptc}; as for just passenger trains, only
 %figure
-50\% of locomotives and 24\% of route miles have \gls{ptc}; see figure
+50\% of locomotives and 24\% of route miles have \gls{ptc}; see Figure
 %citation
-\ref{adoption} (FRA,2017).
-
+\ref{adoption} (FRA PTC Implementation, 2017).
 
 \subsection{Legal Coverage}
 
@@ -432,7 +444,7 @@ Since train derailment due to driver error is such a common issue, laws have bee
 passed to mandate the use of \gls{ptc}. \gls{ptc} had been listed in the ``Most
 Wanted List of Transportation Safety Improvements'' by the \gls{ntsb} since 1990
 %citation
-(``Modifications to NTSB Most Wanted List'' 2007). However, no law was passed
+(NTSB Most Wanted, 2007). However, no law was passed
 regarding it until 2008, nearly twenty years later. In October 2008, Congress
 passed Public Law 110-432: the \gls{rsia}. Many topics were addressed in this
 program, including railroad worker hours, standards for track inspection, and
@@ -473,9 +485,9 @@ railway progress toward total \gls{ptc} integration.
     \begin{center}
         %citation
         \captionsetup{justification=centering}
-        \caption[Individual PTC implementation Progress]{Individual railroad progress
+        \caption[Individual PTC Implementation Progress]{Individual railroad progress
         toward \gls{ptc} implementation as of\\
-        September 30, 2017 (Federal Railroad Administration, 2017).}
+        September 30, 2017 (FRA Individual PTC Progress, 2017).}
         \includegraphics[width=0.9\textwidth]{RailroadProgressTable.png}
         \label{progress}
     \end{center}
@@ -490,7 +502,7 @@ The \gls{rsia} requires many \gls{ptc} components to be completed by all
 railroads: locomotive equipment, track segments, radio towers, employee training,
 and a \gls{ptc} safety plan. These components must all be completed at the same
 location for a route mile to be considered ``in \gls{ptc} operation''. The
-\gls{fra} has progress reports for all rail companies operating within the US.
+\gls{fra} has progress reports for all rail companies operating within the U.S.
 Amtrak, one of the most popular passenger railways in the country, has indeed made
 progress to complete implementation of \gls{ptc}: 67\% of its route miles are in
 operation, and more than 70\% of locomotives equipment, radio towers, and training
@@ -502,58 +514,6 @@ an additional 185 were injured. Many other railroad companies are lagging behind
 Amtrak in \gls{ptc} implementation, including multiple railways which have made no
 progress at all towards these goals.
 
-\subsection{Technological Issues}
-
-Many railway companies have failed to implement \gls{ptc} due to complex technical
-challenges. These companies need to develop and implement highly complex braking
-algorithms on their trains that account for a multitude of complicated and varying
-factors from simple, controlled variables such as ``velocity, track gradient, or
-weight'' to outside elements such as ``weather, cargo weight, and braking systems
-%citation
-installed on different rail cars'' (Young, 2016) Also, most train companies share
-the same tracks meaning these competing companies need to work together so that
-competing trains all operate on the same complex system. To universally implement
-\gls{ptc} properly, rival train companies not only need to develop the complex
-algorithms and technology, but also communicate and work effectively together, an
-ultimately difficult feat.
-
-\subsection{Economical Issues}
-
-For this reason, designing \gls{ptc} is very expensive, preventing railway
-companies from investing in the technology. These companies do not believe that
-\gls{ptc} is a necessary expense, and the unpredictability of the substantial
-building costs, ranging from \$6 billion to \$22 billion, only discourages proper
-%citation
-investment (Cullen, 2018). To help with these significant expenses, the federal
-government granted \$197 million for the development of \gls{ptc}. Unfortunately,
-this is only a small fraction of the overall costs. \gls{ptc} continues to not
-receive the proper funding from the federal government for companies to meet the
-required deadlines.
-
-\subsection{Safety Concerns}
-
-\gls{ptc} will require all trains on a railroad network to relay information about
-their current location and speed such that a potential crash can be
-programmatically detected and prevented. This introduces a concern for information
-security and terrorism prevention, and forces individuals to make a decision
-between opaqueness and transparency. The danger of potential hacking and terrorism
-raises both technical and ethical concerns that must be analyzed to determine if
-the implementation of \gls{ptc} will save more lives than it can possibly put in
-danger if the proper informational safety precautions are not thoroughly covered.
-
-\subsection{Recommendations}
-
-All the concerns previously stated are valid and a potential deterrent from the
-life-saving \gls{ptc} technology, however, potential solutions exist. To keep
-train information secure and to mitigate the risk of hacking, it is recommended
-that \gls{ptc} not be installed until the adequate cybersecurity standards are put
-in place. Specifically, implementing a decentralized communication protocol paired
-with a pre-shared key encryption will greatly enhance the cybersecurity of
-\gls{ptc}. So that all train companies can afford to implement the safety
-technology, it is also recommended that funding increases and taxes are added to
-train tickets. Additional funding is the final barrier to universal \gls{ptc}
-implementation, saving countless lives.
-
 \pagebreak
 
 \section{Technological Issues}
@@ -564,7 +524,7 @@ The goal of train traffic control involves both \textit{protection}, which ensur
 separation of trains and prevents conflicting movements that may lead to a
 collision, as well as providing additional control over the timing of movements in
 %citation
-order to encourage \textit{efficiency} (Bryan and McGonigal 2006). As a mode of
+order to encourage \textit{efficiency} (Bryan and McGonigal, 2006). As a mode of
 transportation, railroads are very different from cars or airplanes which gives
 them different kinds of safety issues:
 
@@ -646,6 +606,7 @@ In a wayside-centric system, devices installed along the tracks are responsible
 for detecting the presence of a train. These devices, such as track circuits and
 axle counters, can determine occupancy for fixed stretches of track. These
 sections of track are known as blocks, and wayside signals form the backbone of
+%citation
 \textit{fixed-block} signaling systems (Pascoe and Eichorn, 2009). Although track
 circuits do not directly identify individual trains, this data can be combined
 with information about when and where a particular train departs and arrives to
@@ -674,15 +635,15 @@ which disconnect the circuit. Similarly, slide fences\textemdash barriers which
 form electrical circuits that are easily broken or displaced\textemdash are used
 to detect falling rocks. Other types of devices detect overheating wheels and
 %citation
-brake problems, which when untreated can cause a train to derail (McGonigal,
-2006).
+brake problems, which when untreated can cause a train to derail (Bryan and
+McGonigal, 2006).
 
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=4in]{PTCDiagram.png}
         %citation
-        \caption[GPS-based train-centric positioning]{Implementation of \gls{gps}-based
-        train-centric positioning (Badugu, 2013).}
+        \caption[GPS-Based Train-Centric Positioning]{Implementation of \gls{gps}-based
+        train-centric positioning (Badugu and Movva, 2013).}
     \end{center}
 \end{figure}
 
@@ -709,7 +670,7 @@ enough so that trains have enough space to stop before reaching the end. The use
 dynamic movement authorities allows for more flexible and efficient train control.
 
 %citation
-In addition, authority generation can be discrete or continuous (Pascoe and Eichorn
+In addition, authority generation can be discrete or continuous (Pascoe and Eichorn,
 2009). As the names suggest, the former is based on fixed section of railroad
 tracks while the latter works arbitrary sections of rail. These lead to two
 signaling systems known as fixed-block signaling and moving-block signaling,
@@ -723,10 +684,10 @@ dispatch process can be fully manual, in which an operator would be physically
 responsible for pulling the levers that control the switches and signal
 indications. This process can be augmented by a mechanical or computer-assisted
 %citation
-conflict checking device to protect against human error (Lindsey 2009). It is
+conflict checking device to protect against human error (Lindsey, 2009). It is
 typically done in a control center, but sometimes track-side equipment also
 %citation
-generate permissive signals, which are used as a fallback (Bryan and McGonigal
+generate permissive signals, which are used as a fallback (Bryan and McGonigal,
 2006).
 
 \subsubsection{Delivery}
@@ -741,13 +702,13 @@ the train crew also need to know about speed restrictions, which can vary based 
 track maintenance conditions. Traditionally, this was accomplished using verbal
 %citation
 communication and/or speed limit signs installed along the tracks (Pascoe and
-Eichorn).
+Eichorn, 2009).
 
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=4in]{SpeedLimits.png}
         %citation
-        \caption[Speed Limit Sign]{A speed limit sign (Citation).}
+        \caption[Speed Limit Sign]{A speed limit sign (Graf, 2013).}
     \end{center}
 \end{figure}
 
@@ -757,13 +718,13 @@ it numerous advantages over wayside signaling. Signals will be shown on an onboa
 display, which is convenient for train drivers as they no longer have to rely on
 spotting wayside signals. Additionally, they do not need to worry about
 %citation
-accidentally missing a signal, as happened in the Dupont derailment (ntsb). Cab
-signals can be easily processed by other onboard equipment that performs automatic
+accidentally missing a signal, as happened in the Dupont derailment (NTSB Washington State, 2018).
+Cab signals can be easily processed by other onboard equipment that performs automatic
 enforcement, providing more sophisticated protection against human error. In
 addition, this can help reduce costs for track-side equipment because the same
 transponder systems used for detection can be used for signaling as well. Cab
 signaling can either replace wayside signaling or function alongside it as an
-additional protective measure (Bryan and McGonigal 2006).
+additional protective measure (Bryan and McGonigal, 2006).
 
 \subsection{Signaling Systems}
 
@@ -795,11 +756,11 @@ they do not have any modern signaling equipment or automatic detection systems
 installed. These sections of rail are known as dark territories. As of 2012, dark
 territories comprise approximately one-third of all railroad routes by length in
 %citation
-the United States and Canada (Raymond, Lindsey and Pachl 2012). One source, a 2011
+the United States and Canada (Raymond, Lindsey, and Pachl, 2012). One source, a 2011
 %citation
 presentation by the Dark Territory Working Group of the Federal Railroad
-Administration, estimates the amount of dark territory in the US to be even higher
-at about 54\%.
+Administration, estimates the amount of dark territory in the U.S. to be even higher
+at about 54\% (FRA Dark Territory, 2011).
 
 \subsubsection{Modern Fixed-Block Signaling}
 
@@ -810,7 +771,7 @@ signals that instruct trains to proceed, stop, or proceed with caution. The firs
 generation of modern fixed-block signaling systems transmitted these signals as
 wayside signals. Later generations introduced the use of cab signals that could
 %citation
-also send speed codes or profiles to the train (Morar 2012).
+also send speed codes or profiles to the train (Morar, 2012).
 
 The partial automation of train control provided by \gls{abs} allows for greater
 capacity of trains on a given track, which leads to increased efficiency. \gls{abs}
@@ -818,14 +779,14 @@ can replace manual signaling entirely, or it might function as an additional
 protective layer on top of manual signaling. In this hybrid setup, the \gls{abs}
 signals create an additional level of redundancy which protects against operator
 %citation
-error and equipment failure (Lindsey 2009). This comes at the cost of increased
+error and equipment failure (Lindsey, 2009). This comes at the cost of increased
 operating and equipment expenses.
 
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=4in]{HybridSignaling.png}
         \captionsetup{justification=centering}
-        \caption[Hybrid fixed-block signaling]{Hybrid fixed block signaling, with
+        \caption[Hybrid Fixed-Block Signaling]{Hybrid fixed block signaling, with
         a manual system generating absolute signals and an automated system generating
         permissive signals.}
     \end{center}
@@ -855,7 +816,7 @@ Modern signaling systems are very common in North America. About half of all rou
 use full \gls{abs}, \gls{cbtc}, or some combination of the two, and an additional
 one-sixth use the aforementioned hybrid manual-\gls{abs} setup. Almost all European
 %citation
-railroads use modern signaling systems (Raymond, Lindsey and Pachl 2012).
+railroads use modern signaling systems (Raymond, Lindsey, and Pachl, 2012).
 
 \subsection{Train Protection Systems and the Technology Behind PTC}
 
@@ -867,14 +828,14 @@ error. They can work to prevent accidents due to missed signals, movement
 violations, or improperly aligned switches. Some of these systems merely provide a
 warning to the train driver, while others can also perform an emergency stop
 %citation
-(Connor and Schmid n.d.).
+(Connor and Schmid).
 
 These form the basis of train protection systems, which are mainly intended to
 provide enforcement for train signals. One well-known protection system is based on
 the trip stop, a mechanical contraption installed along the tracks at a wayside
 signal. If a train passes the signal while it says to stop, the trip stop triggers
 %citation
-the train’s emergency brakes (Connor and Schmid n.d.). Other more sophisticated
+the train’s emergency brakes (Connor and Schmid). Other more sophisticated
 train protection systems can guard against both movement and speed violations by
 using information from the train itself.
 
@@ -894,7 +855,7 @@ When \gls{ptc} detects any of the above conditions, an emergency train stop will
 initiated if the train crew does not quickly act to correct the issue. In addition,
 \gls{ptc} will reduce speed in places where the railway infrastructure is
 %citation
-considered unsafe (CFR Title 49, section 236).
+considered unsafe (Government Publishing Office, 2018).
 
 As with typical train control systems, conflict checking is done from a control
 center which monitors the locations of each train in the rail system. Communication
@@ -908,7 +869,7 @@ the control center will give a signal for the train to automatically brake.
 
 Onboard computers store speed limit profiles for the train tracks and information
 %citation
-about the train’s stopping capabilities to make these calculations (Badugu, 2013).
+about the train’s stopping capabilities to make these calculations (Badugu and Movva, 2013).
 Because this feature can be implemented onboard, constant communication with the
 central authority is not necessary to enforce speed limits. The central authority
 is only necessary to update stored speed limit profiles, which may be done
@@ -926,7 +887,7 @@ rails without knowledge of track circuits.
 There has been some confusion regarding what \gls{ptc} means. Some may assume it
 focuses on improving efficiency, possibly due to confusion with Precision Train
 %citation
-Control (Lindsey 2009). Other sources suggest that \gls{ptc} always involves
+Control (Lindsey, 2009). Other sources suggest that \gls{ptc} always involves
 %citation
 wireless networks and \gls{gps} (Badugu and Movva, 2013). In both these cases,
 \gls{ptc} is conflated with \gls{cbtc} technology. In reality, \gls{ptc} is not
@@ -937,7 +898,7 @@ Different technologies such as \gls{gps} or wireless location devices along the
 train tracks can be used for locating trains. This means \gls{ptc} implementations
 can use newer \gls{cbtc} signaling technology, or they can be implemented on top of
 %citation
-traditional fixed-block signaling (Vantuono 2016). An example of the latter is
+traditional fixed-block signaling (Vantuono, 2016). An example of the latter is
 \gls{eatc}, approved by the \gls{fra} in 2016.
 
 In addition to this, \gls{ptc} systems that use \gls{cbtc} can be deployed alongside
@@ -962,7 +923,7 @@ safety and cost profiles.
     \begin{center}
         \includegraphics[width=4in]{FixedBlockPTC.png}
         \captionsetup{justification=centering}
-        \caption[PTC with fixed-block signaling]{\gls{ptc} system that completely
+        \caption[PTC with Fixed-Block Signaling]{\gls{ptc} system that completely
         relies on traditional fixed-block signaling, and uses manual block dispatching
         for normal operation.}
     \end{center}
@@ -972,7 +933,7 @@ safety and cost profiles.
     \begin{center}
         \includegraphics[width=4in]{PTCHybridCBTC.png}
         \captionsetup{justification=centering}
-        \caption[PTC with hybrid CBTC]{\gls{ptc} system using \gls{cbtc} for automatic
+        \caption[PTC with Hybrid CBTC]{\gls{ptc} system using \gls{cbtc} for automatic
         signaling and enforcement, and traditional fixed-block signaling for manual
         operation.}
         \label{PTCHybridCBTC}
@@ -985,8 +946,8 @@ safety and cost profiles.
 \gls{ats}. Like \gls{ptc}, \gls{ats} is defined in federal regulations
 as a system that performs an ``automatic brake application'' when approaching a
 %citation
-block with ``restrictive block conditions'' (§236.205, Title 49 of the Code of
-Federal Regulations, 2018). These conditions account for occupied blocks, partially
+block with ``restrictive block conditions'' (Government Publishing Office, 2018).
+These conditions account for occupied blocks, partially
 aligned switches, and excess train speed. However, \gls{ats} and \gls{ats} have
 less stringent safety requirements than \gls{ptc}. For example, they are not
 required to handle work zone situations. In addition, \gls{ats} and \gls{ats} are
@@ -1003,14 +964,15 @@ be too restrictive and unnecessarily slow down trains. In the past, ``the freigh
 railroad industry has been reluctant to fit speed control devices due to the often
 heavy-handed nature of such devices having an adverse effect on otherwise safe
 %citation
-train operation'' (Badugu, 2013). Historically, trains have relied only on signals
+train operation'' (Badugu and Movva, 2013). Historically, trains have relied only on signals
 and human judgment to ensure safety. If trains have been operating safely this way
 for decades, why limit the power of train operators who are experienced in properly
 controlling their vehicles? Implementing \gls{ptc} may mean that train operators
 must slow down when they know that it is safe to proceed, reducing the efficiency
 of a railroad line. The \gls{fra} has recognized this challenge, and even admitted
-in 2009 that “\gls{ptc} was in fact likely to decrease the capacity of freight
-railroads on many main lines” (Badugu, 2013). Thus engineers must work to design
+in 2009 that ``\gls{ptc} was in fact likely to decrease the capacity of freight
+%citation
+railroads on many main lines'' (Badugu and Movva, 2013). Thus engineers must work to design
 \gls{ptc} systems that allow for the same, or even better, levels of efficiency as
 that of signaling systems without \gls{ptc}.
 
@@ -1036,7 +998,7 @@ technology has been vulnerable to attack in the past. In 2008, a teenager was
 arrested for tampering with the streetcar system in Lodz, Poland. He had reverse
 engineered the signals used to control track switches and caused derailments by
 %citation
-changing the switches to point the wrong way (Sweeney 2014).
+changing the switches to point the wrong way (Sweeney, 2014).
 
 \subsubsection{Interoperability}
 
@@ -1044,7 +1006,7 @@ changing the switches to point the wrong way (Sweeney 2014).
 \gls{ptc} systems. Because trains owned and managed by different companies often
 share the same stretch of tracks, \gls{ptc} systems must be designed for
 %citation
-interoperability in order to function together effectively (Sweeney 2014).
+interoperability in order to function together effectively (Sweeney, 2014).
 Otherwise, it could be possible that a \gls{ptc} system does not account for trains
 from different companies and fails to apply brakes correctly. This could lead to
 collisions that \gls{ptc} should have prevented. To avoid this, engineers should
@@ -1076,16 +1038,15 @@ railways companies. Yet if we continue to delay implementing this, we will lose
 more lives to simple human error. We mentioned that some train derailments have
 been caused by something as simple as an easy-to-identify locked rail switch
 %citation
-(Reuters, 2018) or by an operator texting and overlooking wayside signals.
-%citation
-(Reuters, 2008) The solution is to overcome the money barrier and support
+(Chatterjee, 2008) or by an operator texting and overlooking wayside signals. The solution
+is to overcome the money barrier and support
 investments that are pro-\gls{ptc}.
 
 In any human endeavor, human error is unavoidable and should be replaced by tested
 automation if possible. During the \gls{metrolink} train collision in Los Angeles,
 the engineer who was texting made a human error that caused the death of 25
 %citation
-people (Reuters, 2008). This could have been prevented if an automated system to
+people (Chatterjee, 2008). This could have been prevented if an automated system to
 stop the train had been in place. As mentioned in the signaling technologies
 section, the fact that trains move only on predetermined tracks makes their
 movements easy to identify, in contrast to something such as a self-driving car.
@@ -1125,14 +1086,13 @@ Funding from the government could play a huge role in delivering \gls{ptc} soone
 and therefore for less money. Unfortunately, the current government funding is
 oftentimes a small fraction of the total cost of implementation. For instance, the
 \gls{usdot} granted \$197 million for the development of \gls{ptc} to 17 regional
-transportation authorities in the US. The largest of these grants gave \$33.75
+transportation authorities in the U.S. The largest of these grants gave \$33.75
 %citation
-million to the New York State Department of Transportation (U.S. Department of
-Transportation Federal Railroad Administration, 2017). Considering the scale of the
-billions of dollars that are necessary to implement a \gls{ptc} system, these grants
-in the scale of tens of millions of dollars are insufficient. There is an urgent
-need to implement \gls{ptc}, and a desire to overcome the economic barrier needs to
-meet this urgency.
+million to the New York State Department of Transportation (USDOT FRA, 2017).
+Considering the scale of the billions of dollars that are necessary to implement a
+\gls{ptc} system, these grants in the scale of tens of millions of dollars are
+insufficient. There is an urgent need to implement \gls{ptc}, and a desire to overcome
+the economic barrier needs to meet this urgency.
 
 Considering the value of human life against economic convenience for rail companies
 creates an ethical dilemma. Since these factors are hard to weight objectively, it
@@ -1152,7 +1112,7 @@ If rail companies were required to share their \gls{ptc} implementation details 
 each other, this could reduce the overall cost of implementing \gls{ptc} for
 everybody. Union Pacific, for instance, has equipped over 98\% of its overall
 %citation
-infrastructure with \gls{ptc} (Union Pacific). If Union Pacific shared
+infrastructure with \gls{ptc} (Union Pacific, 2018). If Union Pacific shared
 implementation details of this technology to other railroad companies, they would
 have to spend less on research and development of \gls{ptc}.  Of course, Union
 Pacific has a financial incentive to protect its technology with patents. It is not
@@ -1190,14 +1150,14 @@ hazards such as rockslides and broken rails, since federal regulations do not
 include that as part of \gls{ptc}. But there can be additional loopholes in the
 protection provided by \gls{ptc}, which can still allow accidents to happen.
 
-An example is the 2012 Niles, MI derailment of an Amtrak Wolverine train, caused by
-a misaligned switch. A maintenance worker had attempted to manually correct a
-malfunctioning switch to its normal position; however, the switch had moved into the
-opposite position, which would divert the train into a nearby train yard. The
-maintenance worker failed to confirm the location of the switch, instead assumed it
-was in the correct position, and then used a jumper cable to bypass a switch
+An example is the 2012 derailment of an Amtrak Wolverine train in Niles, Michigan.
+A maintenance worker had attempted to manually correct a malfunctioning switch to its
+normal position; however, the switch had moved into the opposite position, which would
+divert the train into a nearby train yard. The maintenance worker failed to confirm the
+location of the switch, instead assumed it was in the correct position, and then used a
+jumper cable to bypass a switch
 %citation
-alignment detector (NTSB.gov). The goal is probably to get the switch to show up as
+alignment detector (NTSB Niles, 2013). The goal was probably to get the switch to show up as
 correctly aligned, so as to allow the next train to pass, before further
 investigating a possible detector error.
 
@@ -1206,7 +1166,7 @@ sensor was manually bypassed, it did not detect the incorrect alignment. The inb
 train was allowed to proceed, traveling at 60 mph; upon reaching the switch, it was
 unexpected diverted into the train yard (which had a speed limit of 30mph), derailed
 %citation
-because of its high speed, and nearly collided with parked train cars (Vantuono
+because of its high speed, and nearly collided with parked train cars (Vantuono,
 2016).
 
 This incident is a clear demonstration that \gls{ptc} is not a silver bullet that
@@ -1231,7 +1191,7 @@ safety of the passengers and train crew.
 According to the \gls{ntsb} investigation, the maintenance worker in question seemed
 to have been in a hurry to attend a family event later that day, and could have been
 %citation
-frustrated with having to troubleshoot a switch malfunction (NTSB.gov). He likely
+frustrated with having to troubleshoot a switch malfunction (NTSB Niles, 2013). He likely
 chose to bypass proper operating procedures for his own convenience, endangering the
 passengers and train crew in the process.
 
@@ -1333,9 +1293,9 @@ that will completely automate train operations, hence engineers are still needed
 In fact, \gls{ptc} can potentially add more jobs to the economy. Union Pacific has
 invested over \$2 billion and hired about a thousand engineers to work on the
 %citation
-development of \gls{ptc} (Union Pacific). Therefore, \gls{ptc} is in fact beneficial
-for labor economy: in addition to saving lives by preventing crashes, it has the
-long-term economic advantage of creating new jobs.
+development of \gls{ptc} (Union Pacific, 2018). Therefore, \gls{ptc} is in fact
+beneficial for labor economy: in addition to saving lives by preventing crashes, it
+has the long-term economic advantage of creating new jobs.
 
 \subsection{Legislative and Regulatory Issues}
 
@@ -1356,7 +1316,7 @@ ethics deals with the rights that all people have. These rights may be given by
 social convention or by a legal system. The United States Declaration of
 Independence lists some of the country’s legal rights; Thomas Jefferson and the
 other writers believed that every person has the right to ``life, liberty, and the
-pursuit of happiness''. We choose this ethical framework because modern problems
+pursuit of happiness.'' We choose this ethical framework because modern problems
 involving government agencies frequently deal with rights ethics. For example, the
 Second Amendment causes fiery ethical debates on TV and on the internet daily. We
 will use a Rights Ethics framework to evaluate the previous actions and possible
@@ -1366,7 +1326,7 @@ future improvements of Congress, the \gls{fra}, the \gls{ntsb}, and the
 \subsubsection{Current Progress}
 
 %table
-As seen in table \ref{progress}, many railway companies are making significant
+As seen in Table \ref{progress}, many railway companies are making significant
 progress toward full \gls{ptc} implementation. \gls{ptc} significantly decreases the
 probability of human-caused train crashes by acting as an automated safety net in
 the case of driver error. The technology exists and, in many cases, is already
@@ -1376,14 +1336,14 @@ protect people’s rights to life and safety.
 
 \subsubsection{Evaluation of Congress}
 
-By continuing to push back the deadline for \gls{ptc} implementation, the US
+By continuing to push back the deadline for \gls{ptc} implementation, the U.S.
 government is also violating these rights. Congress initially gave railway companies
 over seven years to implement \gls{ptc}. Congress and President Barack Obama then
 passed the two (or four) year extension in 2015 because railway companies were
 %citation
 complaining about the high cost of implementation (Shaer, 2016). Since the first
 deadline, there have been at least four fatal passenger train wrecks in the United
-States. If the US government had been steadfast in its initial deadline and done
+States. If the U.S. government had been steadfast in its initial deadline and done
 more to assist the companies in implementing \gls{ptc}, these crashes may have been
 avoidable. Therefore, by not acting strongly enough in its stance on \gls{ptc},
 Congress and the major transportation agencies have acted unethically. They did not
@@ -1463,14 +1423,14 @@ common \gls{ptc} solution. This is feasible considering the amount that can be
 derived from a small increase per train ticket: for an average train ticket of \$62,
 a 5\% increase per ticket price (an average \$3) for 31.3 million annual customers
 %citation
-will incur about \$100 million per year (Bellstrom, 2011). On its own, this is still
-not enough to feed a billion-dollar budget, but if all railway companies did the
-same, then there would be sufficient funding to cooperate a single \gls{ptc} project
-for the benefit of all participating railways. Increasing the budget for railway
-security is the direction that many railway companies around the world are taking,
-especially India, which is a strong indicator for the direction that US railways
+will incur about \$100 million per year (Bellstrom and Wieczner, 2011).
+On its own, this is still not enough to feed a billion-dollar budget, but if all
+railway companies did the same, then there would be sufficient funding to cooperate
+a single \gls{ptc} project for the benefit of all participating railways. Increasing
+the budget for railway security is the direction that many railway companies around
+the world are taking, especially India, which is a strong indicator for the direction
 %citation
-should take (BusinessToday.in, 2018).
+that U.S. railways should take (BusinessToday.in, 2018).
 
 Of course, the price increase won’t be specific to Amtrak: this train ticket tax
 will be imposed on all railways that did not implement \gls{ptc} yet. This condition
@@ -1498,11 +1458,10 @@ budget is typically dedicated to funding \gls{ptc} implementation. In 2017, the
 \gls{fra} requested \$3.7 billion from the government for the \gls{rsia}.
 \$1.25 billion of this was to be set aside ``for \gls{ptc} implementation grants to
 %citation
-commuter and short line railroads'' (``Budget Estimates: Fiscal Year 2017'', 2017).
+commuter and short line railroads'' (FRA Budget Estimates, 2017).
 However, the Congress granted a total of \$6.6 million for \gls{ptc}
 %citation
-(``Transportation, Housing and Urban Development, and Related Agencies
-Appropriations Act, 2017'', 2017). This is a drastic reduction which will
+(Congress, 2017). This is a drastic reduction which will
 significantly hinder the \gls{fra}’s ability to help railway companies. It is
 recommended that Congress begins to fund the \gls{fra} at the level they believe is
 necessary. \gls{ptc} implementation only needs to happen once; a large windfall for
@@ -1524,8 +1483,8 @@ invest in \gls{ptc} and implement the safety technology quicker since passengers
 will be more aware of the dangers and possibly more skeptical about buying train
 tickets. Only, 29.5\% of railroad companies have submitted their \gls{ptc} Safety
 %citation
-Plan to the \gls{fra} as of September, 2017 (FRA, 2017). Passengers should be
-informed if the train they are boarding is taking the appropriate measures to ensure
+Plan to the \gls{fra} as of September, 2017 (FRA Individual PTC Progress, 2017). Passengers
+should be informed if the train they are boarding is taking the appropriate measures to ensure
 that they are safe. With the potential of passengers feeling wary about riding on
 trains, they will look for other modes of transportation which will hurt train
 companies financially. With the potential loss of business along along with
@@ -1567,7 +1526,7 @@ rail still rely only on signaling to prevent accidents. Tolerating even a single
 preventable train accident is one accident too many, because \gls{ptc} exists and it
 can stop these tragedies.
 
-However, the high cost of \gls{ptc} has made railroad companies reluctant to
+The high cost of \gls{ptc} has made railroad companies reluctant to
 implement it. To address this, we recommend for federally-enforced taxation to be
 imposed on railway companies that do not use \gls{ptc}. These taxes will push
 companies to implement it sooner to reduce their expenses, as well as generate
@@ -1633,12 +1592,283 @@ decision-makers to help get things on track.
 \addcontentsline{toc}{section}{References}
 \begin{thebibliography}
     \raggedright
-    \bibitem{badugu} Badugu, S., and Movva, A., April, 2013, Positive Train Control;
-    International Journal of Emerging Technology and Advanced Engineering, v. 3,
-    issue no. 4.
 
-    \bibitem{thurston} Thurston, D.F., May, 2012, A Proactive Approach To Train
-    Control; Temple University, ProQuest Dissertations Publishing.
+    \bibitem{aarptc2018}
+    Association of American Railroads, 2018, Policy Issues in Positive Train Control,
+    [\url{https://www.aar.org/policy/positive-train-control}].
+
+    \bibitem{badugu}
+    Badugu, S., and Movva, A., Apr., 2013, Positive Train Control:
+    International Journal of Emerging Technology and Advanced Engineering, v. 3,
+    issue no. 4,
+    [\url{citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.448.4394&rep=rep1&type=pdf}].
+
+    \bibitem{telegraphschoolboyhacking}
+    Baker, G., Jan. 11, 2008, Schoolboy hacks into city's tram system: The Telegraph,
+    [\url{www.telegraph.co.uk/news/worldnews/1575293/Schoolboy-hacks-into-citys-tram-system.html}].
+
+    \bibitem{bureauoftransportationstatistics}
+    Bureau of Transportation Statistics, Mar., 2017, Transportation Fatalities By Mode,
+    [\url{www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_statistics/html/table_02_01.html_mfd}].
+
+    \bibitem{bellstrom}
+    Bellstrom, K. and Wieczner, J., Oct. 10, 2011, 10 Things Amtrak Won't Tell You: MarketWatch,
+    [\url{www.marketwatch.com/story/10-things-amtrak-wont-tell-you-1318016239527}].
+
+    \bibitem{railroadsignalsmeaning}
+    Bryan, F.W., and McGonigal, R.S., May 1, 2006, Railroad signals: What they do, what they mean:
+    Trains, Accessed Mar 8, 2018,
+    [\url{trn.trains.com/railroads/abcs-of-railroading/2006/05/railroad-signals}].
+
+    \bibitem{businesstoday}
+    BusinessToday.in, Feb. 1, 2018, Budget 2018: Forget Cheaper Tickets, Railways May Focus on
+    Safety, Modernisation: Business News, Living Media India Limited,
+    [\url{www.businesstoday.in/union-budget-2018-19/decoding-the-budget/budget-2018-cheaper-tickets-railway-budget-safety/story/269338.html}].
+
+    \bibitem{reuters}
+    Chatterjee, S., Oct. 2, 2008, Train Engineer Was Texting Just before California Crash: Reuters,
+    [\url{www.reuters.com/article/us-usa-train-crash/train-engineer-was-texting-just-before-california-crash-idUSN0152835520081002}].
+
+    \bibitem{railsafetyimprovementact}
+    Congress, 2008, Public Law 110–432 - Rail Safety Improvement Act of 2008,
+    [\url{www.fra.dot.gov/eLib/Details/L03588}].
+
+    \bibitem{congressbudgetact}
+    Congress, 2017, Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2017,
+    [\url{rules.house.gov/sites/republicans.rules.house.gov/files/115/OMNI/DIVISION\%20K\%20-\%20THUD\%20SOM\%20OCR\%20FY17.pdf}].
+
+    \bibitem{railwaytechnicaltrainprotection}
+    Connor, P., and F. Schmid., Train Protection: The Railway Technical Website,
+    Accessed Mar 5, 2018,
+    [\url{www.railway-technical.com/signalling/train-protection.html}].
+
+    \bibitem{cullen}
+    Cullen, T., Feb. 5, 2018, Positive Train Control Costs Have Slowed Implementation: NY Daily News,
+    [\url{www.nydailynews.com/news/national/positive-train-control-costs-slowed-implementation-article-1.3800937}].
+
+    \bibitem{dooley}
+    Dooley, E., Feb. 15, 2018, Some Railroads Won’t Meet Positive Train Control Deadlines, Officials Say: ABC News,
+    [\url{abcnews.go.com/Politics/railroads-meet-positive-train-control-deadlines-officials/story?id=53110861]}].
+
+    \bibitem{emleytechderailed}
+    Emley, B., Jan. 14, 2016, Technology Derailed How For-Profit Industry Is Risking Railway Safety: Boston Review,
+    [\url{bostonreview.net/us/bryce-emley-technology-railway-safety}].
+
+    \bibitem{fradtwg2011}
+    Federal Railroad Administration, May 2011, Dark Territory Working Group Update. Presentation
+    to the 44th Railroad Safety Advisory Committee Meeting: Washington, DC,
+    [\url{https://rsac.fra.dot.gov/document.php?type=meeting\&date=20110520\&name=Dark\%20Territory\%20WG\%20Update.pdf}].
+
+    \bibitem{fraptcsystemtypeapproval}
+    Federal Railroad Administration, 2013, PTC System Type Approval: Enhanced Automatic Train Control (E-ATC),
+    [\url{www.regulations.gov/document?D=FRA-2010-0073-0036}].
+
+    \bibitem{frabudgetestimates}
+    Federal Railroad Administration, 2017, Budget Estimates: Fiscal Year 2017,
+    [\url{www.transportation.gov/sites/dot.gov/files/docs/FRA-2017-CJ.pdf}].
+
+    \bibitem{frafig1}
+    Federal Railroad Administration, Sept., 2017, PTC Implementation Status by Freight and
+    Passenger Rail,
+    [\url{www.fra.dot.gov/app/ptcsummary/}].
+
+    \bibitem{fratab2}
+    Federal Railroad Administration, Sept., 2017, Individual PTC Railroad Progress,
+    [\url{www.fra.dot.gov/app/ptcprogress}].
+
+    \bibitem{titlefortynine}
+    Government Publishing Office, Mar., 2018. Title 49 of the Code of Federal Regulations:
+    Transportation,
+    [\url{www.ecfr.gov/cgi-bin/text-idx?tpl=/ecfrbrowse/Title49/49tab_02.tpl}].
+
+    \bibitem{graf}
+    Graf, T., Feb. 18, 2013, Redirecting the Railroad in Ridgefield: The Columbian,
+    [\url{www.columbian.com/news/2013/feb/18/redirecting-the-railroad/}].
+
+    \bibitem{graham}
+    Graham, D.A., Dec. 19, 2017, Could Positive Train Control Have Prevented the Washington
+    Wreck?: The Atlantic,
+    [\url{www.theatlantic.com/politics/archive/2017/12/washington-wreck-positive-train-control/548744/}].
+
+    \bibitem{cnncommutertraincrash}
+    Hanna, J. and Criss, D., Feb. 4, 2018, The Deadliest US Commuter Train Crashes in the
+    Past Two Decades: CNN,
+    [\url{www.cnn.com/2016/09/29/us/us-commuter-train-wreck-history-trnd/index.html}].
+
+    \bibitem{johnson}
+    Johnson, D., Feb. 26, 2018, How to Cure Smoke Pollution From Factories: Sciencing,
+    [\url{sciencing.com/cure-smoke-pollution-factories-23979.html}].
+
+    \bibitem{lindsey2009}
+    Lindsey, R., Dec. 2009, Positive Train Control in North America, IEEE Vehicular Technology
+    Magazine. doi:10.1109/MVT.2009.934666,
+    [\url{ieeexplore.ieee.org/document/5338992}].
+
+    \bibitem{reuterslockedtrackswitch}
+    McKay et al., Feb. 5, 2013, Locked Track Switch Blamed in Fatal South Carolina Amtrak Crash:
+    Reuters, Thomson Reuters,
+    [\url{www.reuters.com/article/us-usa-train-investigation/locked-track-switch-blamed-in-fatal-south-carolina-amtrak-crash-idUSKBN1FP1HL}].
+
+    \bibitem{ietevolutionofcommunication}
+    Morar, S. 2012, Evolution of communication based train control worldwide: IET Professional
+    Development Course on Railway Signalling, Stevenage: The Institution of Engineering \&
+    Technology, p. 218-226, doi:10.1049/ic.2012.0054.
+
+    \bibitem{fortunecyberbulnerabilities}
+    Morris, D. Z., Jan. 22, 2016, Railroad Association Denies Smart Train Cyber Vulnerabilities:
+    Fortune,
+    [\url{fortune.com/2016/01/22/railroad-association-denies-smart-train-cyber-vulnerabilities/}].
+
+    \bibitem{ntsbmostwantedlist}
+    National Transportation Safety Board, Nov. 8, 2007, Modifications to NTSB Most Wanted List,
+    [\url{web.archive.org/web/20080916130726/http:/www.ntsb.gov/Recs/mostwanted/modifications-1990-on.pdf}].
+
+    \bibitem{massachusettsaccidentreport}
+    National Transportation Safety Board, Jul. 14, 2009, Railroad Accident Report - Collision
+    Between Two Massachusetts Bay Transportation Authority Green Line Trains Newton,
+    Massachusetts May 28, 2008: Washington D.C., National Transportation Safety Board, 46 p.,
+    [PB2009-916302,
+    \url{www.ntsb.gov/investigations/AccidentReports/Reports/RAR0902.pdf}].
+
+    \bibitem{metrolinkaccidentreport}
+    National Transportation Safety Board, Jan. 21, 2010, Railroad Accident Report - Collision of
+    Metrolink Train 111 with Union Pacific Train LOF65-12 Chatsworth, California September 12,
+    2008: Washington D.C., National Transportation Safety Board, 83 p., [PB2010-916301,
+    \url{www.ntsb.gov/investigations/AccidentReports/Reports/RAR1001.pdf}].
+
+    \bibitem{washingtonaccidentreport}
+    National Transportation Safety Board, Jul. 27, 2010, Railroad Accident Report - Collision of
+    Two Washington Metropolitan Area Transit Authority Metrorail Trains Near Fort Totten Station
+    Washington, D.C. June 22, 2009: Washington D.C., National Transportation Safety Board, 156 p.,
+    [PB2010-916302,
+    \url{www.ntsb.gov/investigations/AccidentReports/Reports/RAR1002.pdf}].
+
+    \bibitem{ntsbmichigan}
+    National Transportation Safety Board, Nov. 20, 2013, Railroad Accident Brief: Derailment -
+    Niles, Michigan: Washington D.C., National Transportation Safety Board, 13 p.,
+    [\url{www.ntsb.gov/investigations/AccidentReports/Reports/RAB1306.pdf}].
+
+    \bibitem{metronorthaccidentreport}
+    National Transportation Safety Board, Oct. 24, 2014, Railroad Accident Brief - Metro-North
+    Railroad Derailment: Washington D.C., National Transportation Safety Board, 6 p.,
+    [\url{www.ntsb.gov/investigations/AccidentReports/Reports/RAB1412.pdf}].
+
+    \bibitem{amtrakaccidentreport}
+    National Transportation Safety Board, May 17, 2016, Railroad Accident Report - Derailment of
+    Amtrak Passenger Train 188 Philadelphia, Pennsylvania May 12, 2015: Washington D.C.,
+    National Transportation Safety Board, 70 p., [PB2016-103218,
+    \url{www.ntsb.gov/investigations/AccidentReports/Reports/RAR1602.pdf}].
+
+    \bibitem{ntsbdupontpressrelease}
+    National Transportation Safety Board, Jan 25, 2018, NTSB Issues Investigative Update on Washington
+    State Amtrak Derailment,
+    [\url{https://www.ntsb.gov/news/press-releases/Pages/mr20180125.aspx}].
+
+    \bibitem{ieeecommunicationbasedtraincontrol}
+    Pascoe, R.D., and Eichorn, T.N., Dec. 2009, What is communication-based train control: IEEE
+    Vehicular Technology Magazine, doi:10.1109/MVT.2009.934665,
+    [\url{ieeexplore.ieee.org/document/5338991/}].
+
+    \bibitem{poel}
+    Poel, I. van de, and Royakkers, L.M.M., Ethics, Technology, and Engineering: an
+    Introduction: Wiley-Blackwell, 2011.
+
+    \bibitem{irsedarkterritory}
+    Raymond, G., Lindsey, R., and Pachl, J., 2012, ERTMS Regional and North American Dark
+    Territory: A Comparison: IRSE Aspect, Institute of Railway Signal Engineers,
+    [\url{www.irse.org/knowledge/publicdocuments/2.04\%20Raymond\%20-\%20ERTMS\%20Regional\%20and\%20North\%20American\%20dark\%20territory.pdf}].
+
+    \bibitem{satlin}
+    Satlin, A.H., and Liebelson D., May 13, 2015, Amtrak Train Was Going At Twice The Speed
+    Limit Before Philadelphia Crash: The Huffington Post,
+    [\url{www.huffingtonpost.com/2015/05/13/amtrak-crash-speed-limit_n_7276902.html}].
+
+    \bibitem{railwayagelegacytraincontrol}
+    Schanoes, D., Jul. 26, 2016, PTC, legacy train control and vitality: Railway Age, Accessed
+    Feb 13, 2018,
+    [\url{www.railwayage.com/news/ptc-legacy-train-control-and-vitality/}].
+
+    \bibitem{newyorktimeswreckofamtrak}
+    Shaer, M., Jan. 26, 2017, The Wreck of Amtrak 188: New York Times.
+
+    \bibitem{sweeney}
+    Sweeney, S., Nov., 2014, Is PTC going to work?: Trains, p. 24-33,
+    [\url{trn.trains.com/~/media/files/pdf/ptc/trnc1114.pdf}].
+
+    \bibitem{thurston}
+    Thurston, D.F., May, 2012, A Proactive Approach To Train
+    Control: Temple University, ProQuest Dissertations Publishing.
+    [\url{search.proquest.com/docview/1022177591/3731FE4229A64CFBPQ/5}].
+
+    \bibitem{trainsmag}
+    Trains Magazine, 2006, Glossary of railroad signal terms: Trains,
+    [\url{trn.trains.com/railroads/abcs-of-railroading/2006/05/glossary-of-railroad-signal-terms}].
+
+    \bibitem{unionpacific}
+    Union Pacific, 2018, Positive Train Control,
+    [\url{www.up.com/media/media_kit/ptc/about-ptc/}].
+
+    \bibitem{deptofdefense}
+    United States Department of Defense, 2017, Bureau of Transportation Statistics - Table 2.1:
+    Transportation Fatalities by Mode: Washington D.C.,
+    [\url{www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national\_transportation\_statistics/html/table\_02\_01.html\_mfd}].
+
+    \bibitem{usdot}
+    U.S. Department of Transportation Federal Railroad Administration, May 31, 2017, U.S.
+    Department of Transportation Announces \$197 Million in Grants for Positive Train Control
+    Implementation: U.S. Department of Transportation Federal Railroad Administration.
+    [\url{www.fra.dot.gov/eLib/details/L18716}].
+
+    \bibitem{vantuono}
+    Vantuono, W.C., 2016, PTC vs. Legacy Train Control Redux: Railway Age,
+    [\url{www.railwayage.com/regulatory/ptc-vs-legacy-train-control-redux/}].
+
+    \bibitem{young}
+    Young, J., 2016, The Complexities and Challenges of Positive Train Control: Association of
+    American Railroads,
+    [\url{www.aar.org/report/Pages/R1C3S2.aspx}].
+
 \end{thebibliography}
+
+\pagebreak
+
+\section*{Check List for Final Team Paper}
+\addcontentsline{toc}{section}{Check List for Final Team Paper}
+
+\textit{This check list, signed by a member of the team, is to be submitted with the
+Final Report.}
+
+\begin{todolist}
+    \item Printed one sided
+    \item 1.5 Spacing
+    \item 11 pt Times Roman or similar serif font
+    \item Pagination\\
+    (title page numbered ``i'' but not displayed; remainder of front
+    matter numbered using small Roman numerals ii-……; first page of report
+    numbered beginning 1 in the bottom center)
+    \item Heading and subheadings throughout report (see sample passed around in
+    discussion section)
+    \item 7-9 pages of text per group member
+    \item In-text citation format is that specified in Course Manual (e.g. (Jones,
+    2009) or some variant thereof). Other forms of citation (e.g. MLA or bracketed
+    numbers) should not be used
+    \item Bibliography is in the form specified in the Course Manual.
+    \item Provide two copies of the report:
+    \begin{todolist}
+        \item Bind one copy with a coil or comb binding (available any photocopy
+        shop)
+        \item Provide one copy unbound - no staples, brads, rings or other
+        devices(see below)
+    \end{todolist}
+    \item Due date is Monday, December 11, NLT 5:00 pm unless other arrangements are
+    made.
+    \item At the time of turn in, a box of large manila envelopes and bulldog clips
+    (for the loose copy of the report) will be available outside of Boelter Hall
+    6417 for submission.
+\end{todolist}
+\begin{center}
+    \textit{This report meets the requirements noted above}\\
+    \rule{0.5\textwidth}{1pt}
+\end{center}
 
 \end{document}
